@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>CMPT 361 HW1 - Adam Bahrami</title>
+    
+    </head> <body>
+    
+    <h2>CMPT 361 - Homework 1</h2>
+    
+    <p>Name: <b>Adam Bahrami</b></p>
+    <p>Student No: <b>301457246</b></p>
+    <p>Date: 09/26/2023</p>
+    
+    <h4>Honor statement:</h4>
+    <p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+    
+    <h4>1: Take two photographs</h4>
+    <img src="question 1/HP.png" alt="HP" width="300" height="300">
+    <img src="question 1/LP.png" alt="LP" width="300" height="300">
+    
+    
+    <h4>2: Compute frequency representations</h4>
+    <img src="question2/HP-freq.png" alt="HP-freq" width="300" height="300">
+    <img src="question2/LP-freq.png" alt="LP-freq" width="300" height="300">
+    
+    <h4>3: Visualize kernels</h4>
+    <img src="question 3/gaus-surf.png" alt="gaus-surf" width="300" height="300">
+    <img src="question 3/dog-surf.png" alt="dog-surf" width="300" height="300">
+    <br><br>
+    <img src="question 3/HP-filt.png" alt="HP-filt" width="300" height="300">
+    <img src="question 3/HP-filt-freq.png" alt="HP-filt-freq" width="300" height="300">
+    <br><br>
+    <img src="question 3/LP-filt.png" alt="LP-filt" width="300" height="300">
+    <img src="question 3/LP-filt-freq.png" alt="LP-filt-freq" width="300" height="300">
+    <br><br>
+
+
+
+    <img src="question 3/HP-dogfilt.png" alt="HP-dogfilt" width="300" height="300">
+    <img src="question 3/HP-dogfilt-freq.png" alt="HP-dogfilt-freq" width="300" height="300">
+    <br><br>
+    <img src="question 3/LP-dogfilt.png" alt="LP-dogfilt" width="300" height="300">
+    <img src="question 3/LP-dogfilt-freq.png" alt="LP-dogfilt-freq" width="300" height="300">
+    
+
+
+    <h4>4: Anti-aliasing</h4>
+    <img src="question4/HP-sub2.png" alt="HP-sub2" width="300" height="300">
+    <img src="question4/HP-sub2-freq.png" alt="HP-sub2-freq" width="300" height="300">
+    <br><br>
+    <img src="question4/LP-sub2.png" alt="LP-sub2" width="300" height="300">
+    <img src="question4/LP-sub2-freq.png" alt="LP-sub2-freq" width="300" height="300">
+    <p>Aliasing occurs in my downsampled half sized high pass image, by a downsample factor of 2, at the front grill of the firetruck, the license plate, the left headlight, the windshield of the car and the sirens of the firetruck. The centered pixels are more at risk and the aliasing takes more effect, and as the pixels get further away, closer to the sides of the image, the pixels are not corrupted as much. From my observations, I see that when down sampling, high frequency pixels are super susceptible to this process. The centered pixels are the higher spatial frequencies, and it can be observed that there's a lot of change in the image intensity, as there's a lot of shapes and edges surrounding the center, and if looking at the original non grayscaled image, it can be observed that there's a lot of rapid color changes near the middle of the picture. As you move further away from the center pixels, especially near the edges of the image, the pixels are less corrupted and aliasing doesn't occur as much due to less and slower intensity changes, but this all depends on the downsample proportion applied. 
+        <br><br>
+        As for the frequency domain of the high pass image, i noticed that downsampling by half the size of the original high pass image caused the frequency image to be less scattered and the brightness more centered, showing that some of the high frequency content of the original image was lost. Furthermore, unwanted artificats were created and higher frequency pixels that were in the image may not have been properly represented. 
+        <br><br>
+        In general, following the nyquist theorem, if I were to calculate the sampling rate, I would see that it would fall under 2x the highest frequency in my half sized image, leaving me to an aliasing effect.
+
+        <br><br>
+        There isn't any pixel corruption or new artifacts created in my half sized downsampled low pass image, as its lack of high frequency components and image intensity changes doesn't give incentive for high frequency pixel altering and even with pixel information lost, most pixels share the same gradient value, as a result, there wasn't a huge aliasing effect occurring. 
+        <br><br>
+        As for the frequency domain of the low pass image, there isnt much of a change either. All that can be observed is the brightness slightly becoming more centered and the top, bottom, left, right outer lines from the center slowly fading out, showing how some high frequency components were lost in the downsampling effect. 
+        
+        
+        </p>
+    
+    <img src="question4/HP-sub4.png" alt="HP-sub4" width="300" height="300">
+    <img src="question4/HP-sub4-freq.png" alt="HP-sub4-freq" width="300" height="300">
+    <br><br>
+    <img src="question4/LP-sub4.png" alt="LP-sub4" width="300" height="300">
+    <img src="question4/LP-sub4-freq.png" alt="LP-sub4-freq" width="300" height="300">
+    <p>As I downsampled to a quarter size of my original image with a downsampling rate of 4, the resolution decreased even more as more pixels became lost. All sections of the firetruck in the high pass image became corrupted. The pixels blurred and scattered with each other, and something very noticeable that stood out was the front grill of the firetruck and how the inner shape was completely manipulated and how the weaker edges rendered out. The same can be said with the license plate as well. Furthermore, as a result of downsampling further than a half size to a quarter size, there's more of an aliasing effect on the outer edges of the image as well. We can see that further pixels are being affected more and all the stuff behind the firetruck, such as the bag, cardboard box, pillow and etc are much more noisy and dont transition well with the overall picture. 
+        <br><br>
+        As for the frequency domain of the quarter sized high pass image, the frequency domain looks super pixelated and hints at the inconsistency of pixel distribution in the spacial domain. Furthermore, we can see the outer lines from the center fading out and the center brightness compressing inwards more, showing the effect of losing higher frequency pixels and new artifacts being introduced to the image. 
+        <br><br>
+        Downsampling my lp image to a quarter size did not have much of an effect and I can't tell the difference between this and my half sized image (which had no distinctive difference from the original sized low pass image), showing how as I downsample further and further, there won't be much pixel corruption, as the change of distribution of pixels doesn't have much of an effect if the neighboring pixels and edge pixels don't have a huge difference in image intensity.
+        <br><br>
+        As for my frequency domain, I can see how the outer lines from the center are fading out a bit more and how the center brightness is compressing inwards more, which demonstrates how the downsampling of the image caused the loss of higher frequency pixels, and now there's more of a centering effect for the lower frequency pixels of the image. 
+        </p>
+    
+    <img src="question4/HP-sub2-aa.png" alt="HP-sub2-aa" width="300" height="300">
+    <img src="question4/HP-sub2-aa-freq.png" alt="HP-sub2-aa-freq" width="300" height="300">
+    <br><br>
+    <img src="question4/HP-sub4-aa.png" alt="HP-sub4-aa" width="300" height="300">
+    <img src="question4/HP-sub4-aa-freq.png" alt="HP-sub4-aa-freq" width="300" height="300">
+    <p>For my half-sized hp image, the optimal gaussian kernel where there was an anti aliasing effect, without excess smoothing, was a gaussian kernel with a size of 3x3 and a standard deviation of 1. The reason why my standard deviation was a low value was because I noticed that in my half sized high pass image, distant pixels weren't aliased and corrupted to an extreme degree, therefore theoretically I didn't need a wider gaussian curve and distribution, and I didnt need the emphasis of these pixels when convoluting my kernel with my image. Also, I was trying to find a balance where my image didn't become too blurry, so I kept my standard deviation at a minimal. Furthermore, keeping my gaussian kernel at a lower size enabled me to focus more on the center pixels that were being aliased instead of further unaffected pixels. Some noticeable differences between my anti aliased version and aliased half sized high pass image is the complete front of the firetruck, where the grill, headlights, license plate, windshield and other components look much more consistent and the high frequency information isn't distorted, but as I applied a gaussian filter on the image, there's more blur and edges are definitely less emphasized and the image intensity shift is more balanced.
+        <br><br>
+        We can also tell this from looking at the image in the frequency domain and seeing how the anti aliased version has a slightly more centered brightness, and there's less brightness scattering as high frequency components are reduced and become less noisy.
+        <br><br>
+        For my quarter sized hp image, the optimal gaussian kernel where there was an anti aliasing effect, without excess smoothing, was a gaussian kernel with a size of 7x7 and a standard deviation of 1.5. Due to downsampling to a smaller image size than the previous downsample, not only were center pixels more corrupted and distorted, but edge pixels and the whole neighborhood of pixels were misrepresented. To attenuate the newly created artifacts, I had to increase the kernel size and the standard deviation, so the gaussian distribution would be wider and when applying the kernel convolution to the image, affected edge pixels would be taken into consideration for the weighted average, so I could properly reduce super noisy and distorted regions of the aliased image. Downsampling to the quarter sized image caused much stronger noise and completely worsened the center pixels even more, where the entire front and side of the firetruck became very distorted and pixelated. The license plate, front grill, headlights, tires, windshield, sirens and other components completely look unsettled. As for the edge pixels, the background which has random items such as a shopping bag, cardboard box, pillow, and even the carpet on the ground seemed to be corrupting. So with a stronger gaussian filter applied to the high pass image before downsampling, the distortion and scatter effect was removed, but at the cause of the anti aliased image looking more blurred with less emphasis on the stronger edges, in order to balance out and neutralize the image. For example, if we compare the license plates of the firetruck from the aliased and anti aliased version, the aliased version shows a inconsistent and noisy region with high pixel intensity changes, whereas the anti-aliased version still makes the license plate unreadable, however blends it in smoothly with the rest of the image and the intensity changes are more controlled, so there's no distortion or noise, but rather blur. The reduction of emphasis on fine details made the firetruck look much more blended in rather than the fire truck standing out.
+        <br><br>
+        In terms of the anti aliased piture in the frequency domain, it had more consistency compared to the aliased version where the the brightness and low frequency components are slightly more centered and compressed. We can also see that the side lines from the center brightness are finer and thinner instead of being more scattered compared to the aliased version of the frequency domain.  </p>
+    
+    <h4>5: Canny edge detection thresholding</h4>
+    
+    <img src="question5/HP-canny-optimal.png" alt="HP-canny-optimal" width="500" height="500">
+    <br><br>
+    <img src="question5/HP-canny-lowlow.png" alt=" HP-canny-lowlow" width="300" height="300">
+    <img src="question5/HP-canny-highlow.png" alt=" HP-canny-highlow" width="300" height="300">
+    <br><br>
+    <img src="question5/HP-canny-lowhigh.png" alt=" HP-canny-lowhigh" width="300" height="300">
+    <img src="question5/HP-canny-highhigh.png" alt=" HP-canny-highhigh" width="300" height="300">
+    <p>For my high pass image, my optimal canny edge detector filter had a low threshold of 0.05 and a high threshold of 0.15, with the standard deviation of the Gaussian filter used by the canny edge detection method set to 1.5. My overall equation looked like this: hpcanny=edge(hpimage,"canny",[0.05 0.15],1.5); . The reasoning for my low threshold value 0.05 was because I wanted to include the weaker edges in the background of the firetruck and wanted to include the small fine details on the firetruck, however a really small threshold such as this one posed a problem, as I wanted to filter out the edges that were coming from the carpet on the ground which have weaker edges, as they have small changes in image intensity, but they ended up appearing to a certain extent. To avoid this problem and to have reduced the huge amount of edges appearing from the carpet, I set the standard deviation for the gaussian filter used by the canny edge detector to a higher value than the default at 1.5, so that there would be a greater gaussian effect and weaker edges would be eliminated. However, I couldn't set it any higher than 1.5, as it would start to remove stronger edges from the firetruck, which defined the image and set the parameters for when the image would be optimal. As for my upper threshold set at 0.15, I set it high enough to recognize the stronger edges, but if I set it any higher, edges with gradient magnitudes just below the upper threshold would have been completely suppressed, and through my observations, I induced that these edges belonged to the firetruck which is the main part of the image, so I coudln't set 0.15 any higher. If I set 0.15 any lower, weaker edges with lower gradient magnitudes would be recognized as stronger edges, and for example, the carpet edges would occur more. With my optimal threshold settings, I was able to show the high frequency components of my firetruck and the background to a certain extent while trying to avoid the edges from the carpet flooring. 
+        <br><br>
+        As I lowered my lower threshold, more of the carpet flooring edges appeared and minimal edges appeared that had no huge significance (hpcanny=edge(hpimage,"canny",[0.01 0.15],1.5);).
+        <br><br>
+        Upping the lower threshold cause the firetruck to lose some of its fine detail and some of the edges became incomplete with spacing between them and the corners. However, with an increased lower threshold, less of the carpet flooring edges occured(hpcanny=edge(hpimage,"canny",[0.09 0.15],1.5);). 
+        <br><br>
+        By lowering my upper threshold, too much of the carpet flooring occured and more insignifcant edges in the background occurred(hpcanny=edge(hpimage,"canny",[0.05 0.07],1.5);).
+        <br><br>
+        By upping my upper threshold, the strong edges on the firetruck were not strong enough, so they were eliminated from the image output. An example of a dissapearing edge is on the left side of the front of the firetruck (hpcanny=edge(hpimage,"canny",[0.05 0.25],1.5);).</p>
+    
+    <img src="question5/LP-canny-optimal.png" alt="LP-canny-optimal" width="500" height="500">
+    <br><br>
+    <img src="question5/LP-canny-lowlow.png" alt=" LP-canny-lowlow" width="300" height="300">
+    <img src="question5/LP-canny-highlow.png" alt=" LP-canny-highlow" width="300" height="300">
+    <br><br>
+    <img src="question5/LP-canny-lowhigh.png" alt=" LP-canny-lowhigh" width="300" height="300">
+    <img src="question5/LP-canny-highhigh.png" alt=" LP-canny-highhigh" width="300" height="300">
+    <p>For my low pass image, my optimal canny edge detector filter had a low threshold of 0.01, an upper threshold of 0.4, and a standard deviation for the gaussian filter used in the canny edge detection at 1.5. Here was the total matLab equation (hpcanny=edge(hpimage,"canny",[0.05 0.25],1.5);). My lower threshold was set at 0.05, a really low value because my low pass image doesn't have super high frequency components, and whatever edges it has have low gradient magnitudes and there isn't huge changes in pixel value intensity compared to the neighborhood pixels. Therefore, to accept these lower value edge pixels, I needed to set my lower threshold very low, and I observed that even as I went lower from 0.05, there wouldn't be any significant new edges introduced, as 0.05 was low enough for all the valuable edges in the image to appear. As for my upper threshold set at 0.25, if I set it higher, it would cut off certain edges with gradient magnitudes very close to the threshold value, and 0.25 was pretty high considering the pixel gradient values in the low pass image. If I set my upper threshold value any lower, it would render in useless edges into the picture which could misrepresent what makes the image optimal. As for my gaussian standard deviation set at 1.7, I was able to set it high without losing pixel information, because gaussian filtering isn't as effective on a low frequency and low pass image. I didn't face much problems setting the optimal threshold settings for my low pass image, as there isn't much of a criteria to consider due to the image being consistent in intensity and the neutral aspect of the image.  
+        <br><br>
+        Lowering my lower threshold didn't cause much of a difference from the optimal image, as my optimal lower threshold was already super low. (lpcanny=edge(lpimage,'canny',[0.001 0.4],1.7);)
+        <br><br>
+        Increasing my lower threshold caused specific edges to lose their details and to become shorter, as well as some edges dissapearing, as their gradient magnitudes didn't meet the minimum requirement of the threshold. (lpcanny=edge(lpimage,'canny',[0.3 0.4],1.7);)
+        <br><br>
+        Lowering my upper threshold caused so many unecessary edges to appear in my image which are even very hard to naturally notice in the original non grayscaled low frequency image. This created a huge misrepresentation of the desired output. (lpcanny=edge(lpimage,'canny',[0.01 0.1],1.7);)
+        <br><br>
+        Increasing my upper threshold got rid of the surrounding edges which in a way shaped the image. Even if the surrounding edges were strong, increasing the threshold to a certain extent caused them to dissapear.Most edges inside the surrounding edges also vanished, as they were not strong enough for the upper threshold (lpcanny=edge(lpimage,'canny',[0.01 0.8],1.7);).
+        
+        
+         
+        
+        </p>
+    
+    
+    </body> </html>

@@ -1,0 +1,16 @@
+hpimg=im2double(imread("question 1/HP.png"));
+lpimg=im2double(imread("question 1/LP.png"));
+hphalf=hpimg(1:2:end,1:2:end,:);
+lphalf=lpimg(1:2:end,1:2:end,:);
+hpquarter=hpimg(1:4:end,1:4:end,:);
+lpquarter=lpimg(1:4:end,1:4:end,:);
+hphalffreq=abs(fftshift(fft2(hphalf))/100);
+lphalffreq=abs(fftshift(fft2(lphalf))/100);
+hpquarterfreq=abs(fftshift(fft2(hpquarter))/100);
+lpquarterfreq=abs(fftshift(fft2(lpquarter))/100);
+gausKernHalf=fspecial("gaussian",3,1);
+gausKernQuarter=fspecial("gaussian",7,1.5);
+hphalfspacial_aa=imfilter(hphalf,gausKernHalf);
+hphalffreq_aa=abs(fftshift(fft2(hphalfspacial_aa))/100);
+hpquarterspacial_aa=imfilter(hpquarter,gausKernQuarter);
+hpquarterfreq_aa=abs(fftshift(fft2(hpquarterspacial_aa))/100);
