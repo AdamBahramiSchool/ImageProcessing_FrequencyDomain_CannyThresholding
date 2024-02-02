@@ -4,7 +4,7 @@
 In this assignment, I filter images and analyze them in both the spatial and frequency domains. Additionally, I experiment with Canny edge detection parameters to find the best option for the images.
 
 ## **Requirements**
-This assignment can be completed in any programming language, but I opted to use MATLAB due to its relevance to the course material.
+This assignment can be completed in most programming languages like Python, but I opted to use MATLAB due to its relevance to the course material.
 
 ## **Contents**
 - **Scripts**: MATLAB scripts for image filtering and analysis.
